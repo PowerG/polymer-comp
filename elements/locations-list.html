@@ -1,0 +1,26 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../locations-service/locations-service.html">
+<link rel="import" href="locations-element.html">
+
+<polymer-element name="locations-list" attributes="show">
+  <template>
+
+    <locations-service id="service" posts="{{locations}}"></locations-service>
+    
+    <div layout vertical center>
+      <template repeat="{{locations in locations}}">
+        <locations-element>
+          
+          <p>{{locations}}</p>
+        </locations-element>
+      </template>
+    </div>
+  </template>
+
+  <script>
+  Polymer({
+
+    
+  });
+  </script>
+</polymer-element>
